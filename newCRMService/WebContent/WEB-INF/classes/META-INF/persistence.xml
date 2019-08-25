@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.0"
+	xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/persistence 
+  http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
+
+	<persistence-unit name="CRM_JPA" transaction-type="RESOURCE_LOCAL">
+		<jta-data-source>newCRM</jta-data-source>
+		<class>th.priisoft.crm.spring.entity.crmdta.RolesEntity</class>
+		
+
+		<properties>
+			<property name="wildfly.jpa.default-unit" value="true" /> 
+			<property name="hibernate.dialect" value="org.hibernate.dialect.SQLServerDialect"/>
+			<property name="hibernate.id.new_generator_mappings" value="false" />
+			<property name="hibernate.jdbc.batch_size" value="1000"/>
+			<property name="hibernate.order_inserts" value="true"/>
+			<property name="hibernate.order_updates" value="true"/>
+		</properties>
+	</persistence-unit>
+	<persistence-unit name="PRII_CRM_JPA" transaction-type="RESOURCE_LOCAL">
+		<jta-data-source>priiCRM</jta-data-source>
+		<class>th.priisoft.crm.spring.entity.prii.crmdta.AccessMenu</class>
+		<class>th.priisoft.crm.spring.entity.prii.crmdta.Bank</class>
+		<class>th.priisoft.crm.spring.entity.prii.crmdta.Cardtype</class>
+		<class>th.priisoft.crm.spring.entity.prii.crmdta.Label</class>
+		<class>th.priisoft.crm.spring.entity.prii.crmdta.Logsession</class>
+		<class>th.priisoft.crm.spring.entity.prii.crmdta.Lov</class>
+		<class>th.priisoft.crm.spring.entity.prii.crmdta.Menu</class>
+		<class>th.priisoft.crm.spring.entity.prii.crmdta.Module</class>
+		<class>th.priisoft.crm.spring.entity.prii.crmdta.Param</class>
+		<class>th.priisoft.crm.spring.entity.prii.crmdta.Partner</class>
+		<class>th.priisoft.crm.spring.entity.prii.crmdta.Product</class>
+		<class>th.priisoft.crm.spring.entity.prii.crmdta.Reason</class>
+		<class>th.priisoft.crm.spring.entity.prii.crmdta.RefMaster</class>
+		<class>th.priisoft.crm.spring.entity.prii.crmdta.Role</class>
+		<class>th.priisoft.crm.spring.entity.prii.crmdta.Status</class>
+		<class>th.priisoft.crm.spring.entity.prii.crmdta.TmpRoleMenu</class>
+		<class>th.priisoft.crm.spring.entity.prii.crmdta.User</class>
+		<class>th.priisoft.crm.spring.entity.prii.crmdta.UsersHi</class>
+		<class>th.priisoft.crm.spring.entity.prii.crmdta.VfullUser</class>
+		<class>th.priisoft.crm.spring.entity.prii.crmdta.Groupmenu</class>
+		<class>th.priisoft.crm.spring.entity.prii.crmdta.Gender</class>
+		<class>th.priisoft.crm.spring.entity.prii.crmdta.Title</class>
+		<class>th.priisoft.crm.spring.entity.prii.crmdta.Province</class>
+		<properties>
+			<property name="hibernate.dialect" value="org.hibernate.dialect.SQLServerDialect"/>
+			<property name="hibernate.id.new_generator_mappings" value="false" />
+			<property name="hibernate.enable_lazy_load_no_trans" value="true"/>
+			<property name="hibernate.jta.allowTransactionAccess" value="true"/>
+			<property name="hibernate.jdbc.batch_size" value="1000"/>
+			<property name="hibernate.order_inserts" value="true"/>
+			<property name="hibernate.order_updates" value="true"/>
+		</properties>
+	</persistence-unit>
+	<persistence-unit name="PRII_PA_JPA" transaction-type="RESOURCE_LOCAL">
+		<jta-data-source>priiPA</jta-data-source>
+		<class>th.priisoft.crm.spring.entity.prii.padta.AppCall</class>
+		<class>th.priisoft.crm.spring.entity.prii.padta.AppHi</class>
+		<class>th.priisoft.crm.spring.entity.prii.padta.Application</class>
+		<class>th.priisoft.crm.spring.entity.prii.padta.Beneficiary</class>
+		<class>th.priisoft.crm.spring.entity.prii.padta.Campaign</class>
+		<class>th.priisoft.crm.spring.entity.prii.padta.CampaignHi</class>
+		<class>th.priisoft.crm.spring.entity.prii.padta.Beneficiary</class>
+		<class>th.priisoft.crm.spring.entity.prii.padta.Client</class>
+		<class>th.priisoft.crm.spring.entity.prii.padta.Document</class>
+		<class>th.priisoft.crm.spring.entity.prii.padta.Hisgenesy</class>
+		<class>th.priisoft.crm.spring.entity.prii.padta.Outbound</class>
+		<class>th.priisoft.crm.spring.entity.prii.padta.Planhd</class>
+		<class>th.priisoft.crm.spring.entity.prii.padta.PlanHi</class>
+		<class>th.priisoft.crm.spring.entity.prii.padta.Planinsure</class>
+		<class>th.priisoft.crm.spring.entity.prii.padta.Planoption</class>
+		<class>th.priisoft.crm.spring.entity.prii.padta.Planprem</class>
+		<class>th.priisoft.crm.spring.entity.prii.padta.RefBankCardPlan</class>
+		<class>th.priisoft.crm.spring.entity.prii.padta.Question</class>
+		<class>th.priisoft.crm.spring.entity.prii.padta.Mainquestion</class>
+		<class>th.priisoft.crm.spring.entity.prii.padta.Submainquestion</class>
+		<class>th.priisoft.crm.spring.entity.prii.padta.RefCampaignUser</class>
+		<class>th.priisoft.crm.spring.entity.prii.padta.RefTargetApp</class>
+		<class>th.priisoft.crm.spring.entity.prii.padta.TargetCall</class>
+		<class>th.priisoft.crm.spring.entity.prii.padta.TargetHi</class>
+		<class>th.priisoft.crm.spring.entity.prii.padta.Wavename</class>
+		<properties>
+			<property name="hibernate.dialect" value="org.hibernate.dialect.SQLServer2012Dialect"/>
+			<property name="hibernate.id.new_generator_mappings" value="false" />
+			<property name="hibernate.enable_lazy_load_no_trans" value="true"/>
+			<property name="hibernate.jta.allowTransactionAccess" value="true"/>
+			<property name="hibernate.jdbc.batch_size" value="10000"/>
+			<property name="hibernate.order_inserts" value="true"/>
+			<property name="hibernate.order_updates" value="true"/>
+		</properties>
+	</persistence-unit>
+</persistence>
